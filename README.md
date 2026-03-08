@@ -1,76 +1,118 @@
 # PostgreSQL Course Management System
 
-A **PostgreSQL practice project** demonstrating database design, SQL queries, and advanced SQL concepts.  
-This project is **fully normalized** and includes sample data, indexes, views, stored procedures, triggers, and window functions.
+A **PostgreSQL practice project** that demonstrates database design and advanced SQL concepts.
+The project simulates a **Course Management System** where students enroll in courses taught by teachers and receive grades.
+
+The database is **fully normalized** and includes sample data along with advanced SQL features such as **joins, aggregations, indexes, views, procedures, triggers, and window functions**.
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
-| File | Description |
-|------|-------------|
-| `create_tables.sql` | Creates all normalized tables: Students, Instructors, Courses, Enrollments, Grades |
-| `insert_data.sql` | Inserts sample data into all tables for testing |
-| `basic-queries-&index.sql` | Sample queries including joins, filtering, and aggregation and indexes to optimize queries|
-| `view.sql` | SQL views for common queries |
-| `procedures.sql` | Stored procedures to automate tasks |
-| `triggers.sql` | Triggers for data integrity and automation |
-| `window_functions.sql` | Queries demonstrating window functions like ROW_NUMBER(), RANK(), AVG() OVER() |
-
----
-
-## 🛠 Skills Practiced
-
-- **Database Design**: Normalized tables with relationships  
-- **SQL Queries**: SELECT, JOINs, WHERE, GROUP BY, HAVING  
-- **Aggregations**: SUM, AVG, COUNT, MAX, MIN  
-- **Window Functions**: ROW_NUMBER(), RANK(), DENSE_RANK(), AVG() OVER()  
-- **Indexes**: Creating indexes for query optimization  
-- **Views**: Simplify complex queries and reuse them  
-- **Stored Procedures**: Automate repetitive tasks  
-- **Triggers**: Maintain data integrity and automate events  
+| File                      | Description                                                                     |
+| ------------------------- | ------------------------------------------------------------------------------- |
+| `create_tables.sql`       | Creates all normalized tables: Students, Teachers, Courses, Enrollments, Grades |
+| `insert_data.sql`         | Inserts sample data for testing the database                                    |
+| `.sql`             | Creates indexes to improve query performance                                    |
+| `joins.sql`               | Practice queries using INNER JOIN, LEFT JOIN and multiple table joins           |
+| `aggregation_groupby.sql` | Queries using aggregation functions and GROUP BY                                |
+| `basic_queries-&-indexes.sql`| General SQL queries for filtering and retrieving data and indexes to improve query performance  |
+| `views.sql`               | Creates SQL views for reusable queries                                          |
+| `procedures.sql`          | Stored procedures for automating tasks                                          |
+| `triggers.sql`            | Triggers to enforce business rules and automate actions                         |
+| `window_functions.sql`    | Queries demonstrating window functions like ROW_NUMBER(), RANK(), AVG() OVER()  |
+| `README.md`               | Project documentation                                                           |
 
 ---
 
-## 📝 Tables Overview
+# 🗂 Database Tables
 
-- **students**: Student information  
-- **teacher**: teacher details  
-- **Courses**: Course information  
-- **enrollments**: Links students to courses  
-- **grades**: Stores grades for each enrollment  
+The system consists of **five normalized tables**:
+
+* **students** → Stores student information
+* **teacher** → Stores teacher details
+* **courses** → Contains course information
+* **enrollments** → Connects students to courses
+* **grades** → Stores marks and grades for each enrollment
 
 ---
 
-## 🚀 How to Use
+# 🛠 Skills Practiced
 
-1. Clone the repository:
+This project demonstrates the following **SQL and database skills**:
+
+* Database normalization
+* Table relationships and foreign keys
+* SQL joins (INNER JOIN, LEFT JOIN)
+* Filtering with WHERE clause
+* Aggregations (SUM, AVG, COUNT, MAX, MIN)
+* GROUP BY and HAVING
+* Window functions
+* Index creation for query optimization
+* Views for reusable queries
+* Stored procedures
+* Triggers for automated database actions
+
+---
+
+# 🚀 How to Run the Project
+
+### 1️⃣ Clone the repository
 
 ```bash
 git clone https://github.com/M-ATalha/pgsql-course-management-system.git
+```
 
-Opne postgres sql(pgadmin or pgslq) create data base cource-managment-system and run the bolow
+### 2️⃣ Open PostgreSQL and run the SQL files in this order
 
+```sql
 -- 1. Create tables
 \i create_tables.sql
 
 -- 2. Insert sample data
 \i insert_data.sql
 
--- 3. Create indexes
-\i indexes.sql
+-- 3. General queries and indexes
+\i basic-queries-&-index.sql
 
--- 4. Run sample queries
-\i queries.sql
+-- 4. Practice joins
+\i joins.sql
 
--- 5. Create views
+-- 5. Aggregation and group by queries
+\i aggregation_groupby.sql
+
+
+-- 6. Create views
 \i views.sql
 
--- 6. Create stored procedures
+-- 7. Create stored procedures
 \i procedures.sql
 
--- 7. Create triggers
+-- 8. Create triggers
 \i triggers.sql
 
--- 8. Explore window functions
+-- 9. Practice window functions
 \i window_functions.sql
+```
+
+---
+
+# 📈 Why This Project Is Useful
+
+This project helps practice **real-world SQL concepts used in database development and data engineering**, including:
+
+* Designing normalized relational databases
+* Writing complex SQL queries
+* Optimizing queries using indexes
+* Automating database operations with triggers and procedures
+* Performing analytical queries using window functions
+
+---
+
+# 👨‍💻 Author
+
+**Muhammad Abu Talha**
+Aspiring Data Engineer | PostgreSQL | SQL | Python | Data pipelines
+
+LInked In:
+www.linkedin.com/in/engr-m-a-talha-002953261
